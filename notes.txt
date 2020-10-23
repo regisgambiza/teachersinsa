@@ -1,0 +1,9 @@
+#job_details
+title
+location
+job_type Part-time/Full-time/Substitute
+description
+responsibility
+qualifications
+benefits
+publication_date
