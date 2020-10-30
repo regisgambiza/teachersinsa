@@ -119,19 +119,42 @@
     <!-- slider_area_end -->
 
     <!-- catagory_area -->
-    <div class="catagory_area">
+  <div class="catagory_area">
         <div class="container">
             <div class="row cat_search">
-                <div class="col-lg-9 col-md-4">
+                <!--<div class="col-lg-5 col-md-6">
                     <div class="single_input">
-                        <input type="text" placeholder="Search keyword:Enter location or subject you can teach eg. Mathematics">
+                        <input type="text" placeholder="Search subject taught">
+                    </div>
+                </div>-->
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_input">
+                        <select class="wide" >
+                            <option data-display="Province">Province</option>
+                            <option value="1">Eastern Cape</option>
+                            <option value="2">Free State</option>
+                            <option value="4">Gauteng</option>
+                            <option value="1">Kwazulu-Natal</option>
+                            <option value="2">Limpopo</option>
+                            <option value="4">Mpumalanga</option>
+                            <option value="1">North West</option>
+                            <option value="2">Northern Cape</option>
+                            <option value="4">Western Cape</option>
+                          </select>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-12">
+                <!--<div class="col-lg-3 col-md-12">
                     <div class="job_btn">
                         <a href="#" class="boxed-btn3">Find Job</a>
                     </div>
+                </div>-->
+
+                <div>
+                    <form action="/search" method="get" class="form-inline my-2 my-lg-0">
+                        <input id="q" name="q" value="{{ request.GET.q }}" class="form-control mr-sm-2" type="text" placeholder="Search subject taught" aria-label="Search">
+                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
                 </div>
             </div>
             <div class="row">
@@ -239,9 +262,9 @@
                     <div class="col-lg-12 col-md-12">
                         <div class="single_jobs white-bg d-flex justify-content-between">
                             <div class="jobs_left d-flex align-items-center">
-                                <div class="thumb">
-                                    <img src="{% static 'mysite/img/svg_icon/1.svg' %}" alt="">
-                                </div>
+                                 <!--<div class="thumb">
+                                   <img src="{% static 'mysite/img/svg_icon/1.svg' %}" alt="">
+                                </div>-->
                                 <div class="jobs_conetent">
                                     <a href="job_details.html"><h4>{{ job.title }}</h4></a>
                                     <div class="links_locat d-flex align-items-center">

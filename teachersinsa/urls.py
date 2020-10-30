@@ -20,4 +20,6 @@ from mysite import views as myapp_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', myapp_views.index, name='index'),
+    path('search', myapp_views.search, name='search'),
+    path('learner/<slug:slug>/', myapp_views.job_details, name='job_details'),
 ]
